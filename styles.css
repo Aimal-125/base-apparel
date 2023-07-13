@@ -1,0 +1,206 @@
+*, *::before, *::after {
+	margin: 0;
+	padding: 0;
+}
+* {
+	box-sizing: border-box;
+	font-family: ubuntu, sans-serif;
+}
+.container {
+	height: 100vh;
+}
+.miniContainer {
+	height: 100%;
+	display: flex;
+	background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+}
+.div1 {
+	width: 57%;
+}
+.div2 {
+	width: 43%;
+}
+.div1 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: url(images/bg-pattern-desktop.svg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.d1 {
+	width: 70%;
+	height: 80%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	padding: 1rem;
+	position: relative;
+}
+.hd {
+	font-size: 7vh;
+	letter-spacing: 10px;
+}
+.hd span {
+	color: hsl(0, 36%, 70%);
+	font-weight: 300;
+}
+.txt {
+	font-size: 3vh;
+	color: hsl(0, 36%, 70%);
+	font-weight: 300;
+}
+.logo {
+	width: 50%;
+}
+.logo img {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.ediv {
+	border: 1px solid hsl(0, 6%, 24%);
+	border-radius: 30px;
+	position: relative;
+}
+.input {
+	display: block;
+	width: 100%;
+	padding: 4%;
+	border-radius: 30px;
+	border: none;
+}
+.oval {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 20%;
+	height: 100%;
+	background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+	border-radius: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	transition: all 0.4s;
+	box-shadow: 0px 10px 15px 0px hsl(0, 36%, 70%);
+	border: 1px outset hsl(0, 100%, 98%);
+}
+.oval:hover {
+	background: hsl(0, 100%, 90%);
+	transition: all 0.4s;
+}
+.oval img {
+	display: block;
+	width: 12%;
+}
+.error {
+	position: absolute;
+	top: 50%;
+	right: 22%;
+	transform: translateY(-50%);
+	width: 6%;
+	visibility: hidden;
+}
+.error img {
+	display: block;
+	width: 100%;
+}
+.ep {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%, 200%);
+	font-size: 2vh;
+	color: hsl(0, 74%, 74%);
+	font-weight: 500;
+	visibility: hidden;
+}
+.desktop {
+	width: 100%;
+	height: 100%;
+}
+.desktop img {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.mobile {
+	display: none;
+}
+
+@media screen and (max-height: 400px) {
+	.ep {
+		font-size: 3vh;
+	}
+}
+
+@media screen and (orientation: portrait) {
+	.container {
+		height: initial;
+	}
+	.miniContainer {
+		flex-direction: column;
+		height: initial;
+	}
+	.div1, .div2 {
+		width: 100%;
+	}
+	.div1 {
+		background: white;
+		height: initial;
+	}
+	.desktop {
+		display: none;
+	}
+	.mobile {
+		display: block;
+	}
+	.mobile img {
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+	.d1 {
+		padding: 0;
+		width: initial;
+		justify-content: initial;
+		background: hsl(0, 100%, 98%);
+		height: 120vh;
+	}
+	.logo {
+		width: 40%;
+	}
+	.hd {
+		text-align: center;
+		font-size: 3.5vh;
+		width: 100%;
+		padding: 2rem;
+	}
+	.txt {
+		text-align: center;
+		font-size: 2vh;
+		width: 85%;
+		margin: 0 auto;
+	}
+	.ediv {
+		margin: 2rem auto;
+		width: 90%;
+	}
+	.exdiv {
+		padding: 2rem;
+	}
+	.ep {
+		bottom: 4%;
+		width: 100%;
+		text-align: center;
+		padding: 0.3rem;
+	}
+}
+
+@media screen and (min-height: 1000px) {
+	.d1 {
+		height: 100vh;
+	}
+}
